@@ -10,11 +10,12 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class HelloController {
 
     @GetMapping("/")
-    public String greeting(Model model, RedirectAttributes redirectAttributes) {
+    public String greeting(Model model) {
 
         String name = "Deff";
         model.addAttribute("name", name);
-
+        model.addAttribute("className", "Java");
+        model.addAttribute("classCode", 2545);
         return "hello";
     }
 
